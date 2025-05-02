@@ -451,6 +451,15 @@ body {
      📱 RESPONSIVE
   ---------------------------------*/
   @media (max-width: 600px) {
+
+ body {
+        body {
+            background-size: contain; /* se ajusta sin hacer zoom */
+            background-position: top center;
+            background-repeat: no-repeat;
+          }
+      }
+     
     .contador-circular {
       width: 220px;
       height: 220px;

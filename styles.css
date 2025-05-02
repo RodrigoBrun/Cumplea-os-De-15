@@ -1,0 +1,592 @@
+/* -------------------------------
+   🌐 ESTILOS GENERALES
+---------------------------------*/
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: url('imagenes/fondo 15 sñod.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #1d1f2b;
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  
+  .contenedor-contenido {
+    background-color: rgba(255, 249, 247, 0.2);
+    backdrop-filter: blur(3px);
+    min-height: 100vh;
+    border-radius: 12px;
+    margin: auto;
+    padding: 20px;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .seccion {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #801336;
+  }
+  
+  .nombre {
+    font-size: 32px;
+    color: #a83250;
+  }
+  
+  .fecha {
+    font-size: 18px;
+    color: #803144;
+  }
+  
+  button {
+    background-color: #801336;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a83250;
+  }
+  
+  
+  /* -------------------------------
+     🙋 BIENVENIDA
+  ---------------------------------*/
+  #bienvenida {
+    background: url('assets/fondo-marsala.jpg') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  /* -------------------------------
+     ⏳ CONTADOR CIRCULAR CON FLORES
+  ---------------------------------*/
+  .contador-contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circulo-fondo {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .flores-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    transform: scale(1.1); /* hace la flor un 10% más grande visualmente */
+  }
+  
+  .contador-circular {
+    display: flex;
+    flex-direction: row; /* ← CLAVE para que sea horizontal */
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 20px;
+    z-index: 1;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(37, 10, 22, 0.85);
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+  }
+  
+  .contador-circular div {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: auto;
+    text-align: center;
+    flex: none; /* ← evita que se estiren */
+    white-space: nowrap; /* evita que se corten las palabras */
+  }
+  
+  .contador-circular span {
+    font-size: 20px;
+    display: block;
+  }
+  
+  .contador-circular small {
+    font-size: 11px;
+    color: #ddd;
+    display: block;
+    margin-top: 2px;
+  }
+  
+  
+  
+ /* -------------------------------
+     Celebracion
+  ---------------------------------*/
+  .info-celebracion {
+    background-color: rgba(242, 228, 217, 0.45);;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .icono-celebracion {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  
+  .bloque-info {
+    margin-bottom: 30px;
+  }
+  
+  .bloque-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #4d2c2c;
+    margin-bottom: 10px;
+  }
+  
+  .bloque-info p {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .boton-confirmar,
+.boton-direccion {
+  display: inline-block;
+  background-color: #801336;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.boton-confirmar:hover,
+.boton-direccion:hover {
+  background-color: #a83250;
+}
+
+
+
+  /* -------------------------------
+     🖼️ GALERÍA DE FOTOS
+  ---------------------------------*/
+  .galeria-carrusel {
+    background: url('imagenes/Carrusel2Marron.jpg') center center/cover no-repeat;
+    padding: 60px 20px;
+    color: white; /* por si necesitás contraste con el fondo */
+    position: relative;
+  }
+  
+  .galeria-carrusel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* oscurece el fondo sin afectar contenido */
+    z-index: 0;
+  }
+  
+  .galeria-carrusel > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .titulo-galeria {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo-galeria {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .carrusel-outer {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin: auto;
+    
+  }
+  
+  
+  .carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carrusel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    animation: deslizar 20s linear infinite;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    width: max-content;
+  }
+  
+  .carrusel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .polaroid {
+    background-color: #fffaf4;
+    padding: 10px 10px 40px 10px; /* más alto abajo */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 200px;
+    max-width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+
+  
+
+  
+  /* Animación automática */
+  @keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  
+  
+  /* -------------------------------
+     📝 FORMULARIOS
+  ---------------------------------*/
+  form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  .boton-musica {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #801336;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  
+  
+  /* -------------------------------
+     🔻 FOOTER
+  ---------------------------------*/
+  .footer-invitacion {
+    background-color: #4d2c2c;
+    color: #fffaf4;
+    padding: 40px 20px;
+    margin-top: 80px;
+    font-size: 15px;
+    text-align: center;
+    border-top: 4px solid #801336;
+    position: relative;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-invitacion p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #ffe8e0;
+  }
+  
+  .footer-invitacion small {
+    font-size: 13px;
+    color: #f4d5d5;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer-invitacion strong {
+    color: #f8cdd0;
+  }
+  
+  
+  .footer-invitacion .footer-link {
+    color: #f8cdd0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-invitacion .footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+
+/* -------------------------------
+   🧩 INFO EXTRA - Tarjetas con detalles de la fiesta
+---------------------------------*/
+
+/* Contenedor principal de las tarjetas */
+.info-extra .tarjetas-contenedor {
+    display: flex;                 /* Alineación en columna */
+    flex-direction: column;
+    gap: 30px;                     /* Espacio entre tarjetas */
+    margin-top: 30px;              /* Separación superior */
+  }
+  
+  /* Estilo general de cada tarjeta */
+  .tarjeta-detalle {
+    background-color: #fdf8f5;     /* Fondo crema suave */
+    border-radius: 18px;           /* Bordes redondeados */
+    padding: 30px 20px;            /* Espaciado interno */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);  /* Sombra sutil */
+    text-align: center;            /* Centra el contenido */
+  }
+  
+  /* Título dentro de cada tarjeta */
+  .tarjeta-detalle h3 {
+    font-family: 'Playfair Display', serif; /* Tipografía elegante */
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4d2c2c;                /* Color vino oscuro */
+  }
+  
+  /* Párrafo descriptivo dentro de la tarjeta */
+  .tarjeta-detalle p {
+    font-size: 14px;
+    color: #555;                   /* Gris suave */
+    margin: 15px 0;
+  }
+  
+  /* Icono decorativo centrado en la tarjeta */
+  .tarjeta-detalle .icono-tarjeta {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+
+
+
+
+
+  /* -------------------------------
+     📱 RESPONSIVE
+  ---------------------------------*/
+  @media (max-width: 600px) {
+    .contador-circular {
+      width: 220px;
+      height: 220px;
+      grid-template-columns: 1fr;
+    }
+  
+    .galeria-fotos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .galeria-fotos img {
+      width: 80%;
+    }
+
+    .contador-circular {
+        width: 220px;
+        height: 220px;
+        padding: 15px;
+      }
+    
+      .contador-circular div {
+        font-size: 12px;
+        padding: 8px 10px;
+        min-width: unset;
+        flex: 1 1 80%;
+      }
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-contenido {
+    background: #fdf4ed;
+    border-radius: 25px;
+    padding: 40px 20px 30px 20px;
+    width: 90%;
+    max-width: 420px;
+    margin: 0 15px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icono-formulario img {
+    width: 70px;
+    margin-top: -60px;
+    margin-bottom: 20px;
+  }
+  
+  .cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #4d0b20;         /* fondo vino */
+    color: white;
+    font-size: 20px;             /* un poco más grande */
+    border: 2px solid white;     /* ✅ borde blanco */
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;          /* bien redondo */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sutil sombra */
+    transition: all 0.2s ease;
+  }
+  
+  .cerrar-modal:hover {
+    background: #a83250;
+  }
+  
+  
+  
+  .radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .modal input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+  }
+  
+  .boton-enviar {
+    background-color: #801336;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .icono-formulario {
+    background-color: #fdf4ed;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;     /* CENTRA VERTICAL */
+    justify-content: center; /* CENTRA HORIZONTAL */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+    border: 2px solid #801336; /* ✅ este es el borde vino */
+  }
+  
+  .icono-formulario img {
+    width: 52px;   /* antes estaba en 40px */
+    height: 52px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+  
+  
+  
+  
+
+  

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación 15 Años - Tu nombre</title>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Audio -->
+    <audio id="musicaFondo" src="imagenes/cancion.mp3" loop></audio>
+
+    <!-- Botón de música -->
+    <button class="boton-musica" id="toggleMusica">
+        <i class="fas fa-music"></i>
+    </button>
+
+
+
+    <div class="contenedor-contenido">
+
+
+
+
+
+        <!-- Pantalla de bienvenida -->
+        <section id="bienvenida" class="seccion centrado">
+            <h1>Mis 15 Años</h1>
+            <p>Te invito a celebrar conmigo</p>
+            <h2 class="nombre">Tu nombre</h2>
+            <p class="fecha">30 de abril de 2025</p>
+            <button onclick="irASeccion('contador')">Ver invitación</button>
+        </section>
+
+        <!-- Cuenta regresiva -->
+        <section id="contador" class="seccion contador-contenedor">
+            <h2>Faltan...</h2>
+
+            <div class="circulo-fondo">
+                <img src="imagenes/fondo-floral.jpg" alt="Decoración floral" class="flores-fondo">
+
+                <div class="contador-circular">
+                    <div><span id="dias">00</span><small>Días</small></div>
+                    <div><span id="horas">00</span><small>Horas</small></div>
+                    <div><span id="minutos">00</span><small>Minutos</small></div>
+                    <div><span id="segundos">00</span><small>Segundos</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Celebracion -->
+        <section class="seccion info-celebracion">
+            <img src="imagenes/iCONO-CELEBRACION.jpg" alt="Celebración" class="icono-celebracion">
+
+            <div class="bloque-info">
+                <h3>Día</h3>
+                <p>Sábado 15 de Junio - 17hs</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Lugar</h3>
+                <p>Nombre del salón</p>
+                <a href="#" class="boton-confirmar" onclick="abrirModal(); return false;">
+                    Confirmar asistencia
+                </a>
+
+            </div>
+
+            <div class="bloque-info">
+                <h3>Dirección</h3>
+                <p>Tu ubicación</p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Salon+Avril,+Montevideo"
+                    class="boton-direccion" target="_blank">
+                    ¿Cómo llegar?
+                </a>
+
+            </div>
+        </section>
+
+        <div id="modalConfirmacion" class="modal">
+            <div class="modal-contenido">
+                <button class="cerrar-modal" onclick="cerrarModal()">×</button>
+                <div class="icono-formulario">
+                    <img src="imagenes/Icono-fiesta.png" alt="Celebración">
+                </div>
+                <h2>¿Asistes a la celebración?</h2>
+
+                <form id="formAsistencia">
+                    <div class="radio-group">
+                        <label><input type="radio" name="asiste" value="sí" required> ¡Sí, confirmo!</label>
+                        <label><input type="radio" name="asiste" value="no"> No puedo :(</label>
+                    </div>
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required>
+                    <input type="text" name="extra" placeholder="Dato extra. Ej: Soy vegetariano">
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <!-- Galería de fotos -->
+        <section class="seccion galeria-carrusel">
+            <h2 class="titulo-galeria">Un recorrido de estos 15 años</h2>
+            <p class="subtitulo-galeria">Junto a personas que son muy importantes en mi vida</p>
+
+            <div class="carrusel-outer">
+                <div class="carrusel" id="carrusel">
+                    <div class="polaroid"><img src="imagenes/carruselFoto1.png" alt="Foto 1"></div>
+                    <div class="polaroid"><img src="imagenes/carruselFoto1.png" alt="Foto 2"></div>
+                    <div class="polaroid"><img src="imagenes/carruselFoto1.png" alt="Foto 3"></div>
+                    <div class="polaroid"><img src="imagenes/carruselFoto1.png" alt="Foto 4"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="seccion info-extra">
+            <h2>Fiesta</h2>
+            <p class="descripcion-fiesta">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+          
+            <div class="tarjetas-contenedor">
+          
+              <!-- Tarjeta MÚSICA -->
+              <div class="tarjeta-detalle">
+                <h3>MÚSICA</h3>
+                <img src="imagenes/icono-musica.jpg" alt="Música" class="icono-tarjeta">
+                <p>¿Cuál es la canción que no debe faltar en la playlist?</p>
+                <button onclick="abrirModal('modalMusica')">Recomendar</button>
+              </div>
+          
+              <!-- Tarjeta DRESS CODE -->
+              <div class="tarjeta-detalle">
+                <h3>DRESS CODE</h3>
+                <img src="imagenes/icono-dress.jpg" alt="Dress Code" class="icono-tarjeta">
+                <p>Una orientación para tu vestuario</p>
+                <button onclick="abrirModal('modalDress')">Ver vestimenta</button>
+              </div>
+          
+              <!-- Tarjeta TIPS -->
+              <div class="tarjeta-detalle">
+                <h3>TIPS Y NOTAS</h3>
+                <img src="imagenes/icono-tips.jpg" alt="Tips" class="icono-tarjeta">
+                <p>Información adicional para tener en cuenta</p>
+                <button onclick="abrirModal('modalTips')">Tips</button>
+              </div>
+            </div>
+          </section>
+          
+
+<!-- Modal MÚSICA -->
+<div id="modalMusica" class="modal">
+    <div class="modal-contenido">
+        <button class="cerrar-modal" onclick="cerrarModal('modalMusica')">×</button>
+      <div class="icono-formulario">
+        <img src="imagenes/icono-musica.jpg" alt="Icono música">
+      </div>
+      <h2>Música</h2>
+      <p>Podés sugerir canciones para incluir en la playlist. ¡Queremos tu estilo!</p>
+    </div>
+  </div>
+  
+  <!-- Modal DRESS -->
+  <div id="modalDress" class="modal">
+    <div class="modal-contenido">
+        <button class="cerrar-modal" onclick="cerrarModal('modalDress')">×</button>
+      <div class="icono-formulario">
+        <img src="imagenes/icono-dress.jpg" alt="Icono dress">
+      </div>
+      <h2>Dress Code</h2>
+      <p>Se sugiere un look semi-formal en tonos pasteles, florales o blanco.</p>
+    </div>
+  </div>
+  
+  <!-- Modal TIPS -->
+  <div id="modalTips" class="modal">
+    <div class="modal-contenido">
+        <button class="cerrar-modal" onclick="cerrarModal('modalTips')">×</button>
+      <div class="icono-formulario">
+        <img src="imagenes/icono-tips.jpg" alt="Icono tips">
+      </div>
+      <h2>Tips y Notas</h2>
+      <p>No olvides traer buena onda, confirmar asistencia a tiempo y leer bien la dirección 🎉</p>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+        <!-- Mapa del evento 
+        <section id="ubicacion" class="seccion">
+            <h2>¿Dónde es?</h2>
+            <p>Salón de fiestas “Estilo Marsala”</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.141631203198!2d-55.24721712431401!3d-34.37356397302409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9574a9c8ab0ad9b3%3A0x1f1d624f50250306!2sComplejo%20Jardines!5e0!3m2!1ses!2suy!4v1714659046425!5m2!1ses!2suy"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+-->
+
+
+
+        <!-- Sugerencias musicales 
+        <section id="canciones" class="seccion">
+            <h2>¿Qué canciones no pueden faltar?</h2>
+            <form id="form-cancion">
+                <input type="text" id="cancion" placeholder="Escribí tu canción favorita" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>-->
+
+        <!-- Pie de página -->
+        <footer class="footer-invitacion">
+            <div class="footer-texto">
+              <p>Con cariño, <strong>Tu nombre 💖</strong></p>
+              <small>
+                &copy; 2025 - Invitación diseñada por 
+                <a href="https://www.instagram.com/rodrigobrun/" target="_blank" class="footer-link">@Rodrigo Brun</a>
+              </small>
+            </div>
+          </footer>
+          
+
+
+
+
+
+    </div>
+    <a class="boton-whatsapp" href="https://wa.me/59891123456" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

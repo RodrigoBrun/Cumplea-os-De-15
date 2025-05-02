@@ -4,12 +4,13 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url('imagenes/fondo 15 sñod.png') no-repeat center center fixed;
-    background-size: cover;
+    background: url('imagenes/fondo\ 15\ sñod.png') no-repeat center center fixed;
+    background-size: contain; /* ✅ hace que se vea completa sin recortar */
     background-color: #1d1f2b;
     scroll-behavior: smooth;
     position: relative;
   }
+  
   
   .contenedor-contenido {
     background-color: rgba(255, 249, 247, 0.2);

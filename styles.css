@@ -4,9 +4,9 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url('imagenes/fondo\ 15\ sñod.png') no-repeat center center fixed;
-    background-size: contain; /* ✅ hace que se vea completa sin recortar */
-    background-color: #1d1f2b;
+    background: url('imagenes/fondo 15 sñod.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(242, 228, 217, 0.45);
     scroll-behavior: smooth;
     position: relative;
   }

@@ -469,9 +469,9 @@ body {
 
  body {
         body {
-            background-size: contain; /* se ajusta sin hacer zoom */
-            background-position: top center;
-            background-repeat: no-repeat;
+             background-attachment: scroll;  /* <- móvil no soporta bien fixed */
+        background-size: cover;         /* aún mantiene fondo lleno */
+        background-position: center center;
           }
       }
      

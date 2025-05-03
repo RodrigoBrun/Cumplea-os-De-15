@@ -49,6 +49,14 @@ body {
     color: #801336;
   }
   
+  h2 {
+    font-size: 45px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* sombra sutil y elegante */
+  }
+  
+  
+
   .nombre {
     font-size: 32px;
     color: #a83250;

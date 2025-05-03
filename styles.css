@@ -41,6 +41,7 @@ body {
   .seccion {
     padding: 60px 20px;
     text-align: center;
+    margin-top: 40px; /* 👈 separa esta sección de la anterior */
   }
   
   h1, h2 {
@@ -49,6 +50,11 @@ body {
     color: #801336;
   }
   
+h1{
+    font-size: 50px;
+}
+
+
   h2 {
     font-size: 45px;
     font-weight: 600;
@@ -58,12 +64,13 @@ body {
   
 
   .nombre {
-    font-size: 32px;
+    font-size: 55px;
     color: #a83250;
+    
   }
   
   .fecha {
-    font-size: 18px;
+    font-size: 22px;
     color: #803144;
   }
   
@@ -75,9 +82,23 @@ body {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background 0.3s ease;
   }
+
+  @keyframes latido {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .boton-latido {
+    animation: latido 2s infinite ease-in-out;
+  }
+  
   
   button:hover {
     background-color: #a83250;
@@ -175,30 +196,39 @@ body {
      Celebracion
   ---------------------------------*/
   .info-celebracion {
-    background-color: rgba(242, 228, 217, 0.45);;
+    background-color: rgba(59, 38, 21, 0.45);;
     text-align: center;
     padding: 50px 20px;
+    border-radius: 100px;
   }
   
   .icono-celebracion {
-    width: 200px;
-    margin-bottom: 30px;
+    width: 222px;
+    margin-bottom: 10px !important; /* antes 30px */
+  }
+
+  .info-celebracion .bloque-info:first-of-type {
+    margin-top: -10px; /* acercamos más al ícono */
   }
   
   .bloque-info {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    
   }
   
   .bloque-info h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 30px;
     color: #4d2c2c;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    text-shadow: #1d1f2b;
   }
   
   .bloque-info p {
-    font-size: 16px;
-    color: #333;
+    font-size: 20px;
+    color: #801336;
+    font-weight: bold;
+    text-shadow: #4d0b20;
   }
 
   .boton-confirmar,
@@ -239,6 +269,18 @@ body {
     background: rgba(0, 0, 0, 0.4); /* oscurece el fondo sin afectar contenido */
     z-index: 0;
   }
+
+  .seccion-ancha {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
   
   .galeria-carrusel > * {
     position: relative;
@@ -248,12 +290,12 @@ body {
   .titulo-galeria {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
-    color: #ffffff;
+    color:  #361908;
     margin-bottom: 10px;
   }
   
   .subtitulo-galeria {
-    color: #ffffff;
+    color: #361908;
     margin-bottom: 20px;
   }
 
@@ -288,7 +330,7 @@ body {
   
   .polaroid {
     background-color: #fffaf4;
-    padding: 10px 10px 40px 10px; /* más alto abajo */
+    padding: 20px 20px 100px 20px; /* más alto abajo */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     min-width: 200px;

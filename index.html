@@ -158,53 +158,77 @@
                 <p>Información adicional para tener en cuenta</p>
                 <button onclick="abrirModal('modalTips')">Tips</button>
               </div>
+          
+              <!-- Tarjeta REGALOS -->
+              <div class="tarjeta-detalle">
+                <h3>Regalos</h3>
+                <img src="imagenes/icono-regalo.jpg" alt="Icono regalo" class="icono-tarjeta">
+                <p>Si deseas regalarme algo más que tu hermosa presencia...</p>
+                <button onclick="abrirModal('modalRegalos')">Datos bancarios</button>
+              </div>
+          
             </div>
           </section>
           
+          <!-- Modal MÚSICA -->
+          <div id="modalMusica" class="modal">
+            <div class="modal-contenido">
+              <button class="cerrar-modal" onclick="cerrarModal('modalMusica')">×</button>
+              <div class="icono-formulario">
+                <img src="imagenes/icono-musica.jpg" alt="Icono música">
+              </div>
+              <h2>Música</h2>
+              <p>Podés sugerir canciones para incluir en la playlist. ¡Queremos tu estilo!</p>
+            </div>
+          </div>
+          
+          <!-- Modal DRESS -->
+          <div id="modalDress" class="modal">
+            <div class="modal-contenido">
+              <button class="cerrar-modal" onclick="cerrarModal('modalDress')">×</button>
+              <div class="icono-formulario">
+                <img src="imagenes/icono-dress.jpg" alt="Icono dress">
+              </div>
+              <h2>Dress Code</h2>
+              <p>Se sugiere un look semi-formal en tonos pasteles, florales o blanco.</p>
+            </div>
+          </div>
+          
+          <!-- Modal TIPS -->
+          <div id="modalTips" class="modal">
+            <div class="modal-contenido">
+              <button class="cerrar-modal" onclick="cerrarModal('modalTips')">×</button>
+              <div class="icono-formulario">
+                <img src="imagenes/icono-tips.jpg" alt="Icono tips">
+              </div>
+              <h2>Tips y Notas</h2>
+              <p>No olvides traer buena onda, confirmar asistencia a tiempo y leer bien la dirección 🎉</p>
+            </div>
+          </div>
+          
+          <!-- Modal REGALOS -->
+          <div id="modalRegalos" class="modal">
+            <div class="modal-contenido">
+              <button class="cerrar-modal" onclick="cerrarModal('modalRegalos')">×</button>
+              <div class="icono-formulario">
+                <img src="imagenes/icono-regalo.jpg" alt="Icono regalos">
+              </div>
+              <h2>Regalos</h2>
+              <p>Si deseás regalarme algo, estos son los datos bancarios:</p>
+              <p><strong>Banco:</strong> BROU</p>
+              <p><strong>Cuenta:</strong> 123456789</p>
+              <p><strong>Alias:</strong> Nombre</p>
+            </div>
+          </div>
+          
 
-<!-- Modal MÚSICA -->
-<div id="modalMusica" class="modal">
-    <div class="modal-contenido">
-        <button class="cerrar-modal" onclick="cerrarModal('modalMusica')">×</button>
-      <div class="icono-formulario">
-        <img src="imagenes/icono-musica.jpg" alt="Icono música">
-      </div>
-      <h2>Música</h2>
-      <p>Podés sugerir canciones para incluir en la playlist. ¡Queremos tu estilo!</p>
-    </div>
-  </div>
-  
-  <!-- Modal DRESS -->
-  <div id="modalDress" class="modal">
-    <div class="modal-contenido">
-        <button class="cerrar-modal" onclick="cerrarModal('modalDress')">×</button>
-      <div class="icono-formulario">
-        <img src="imagenes/icono-dress.jpg" alt="Icono dress">
-      </div>
-      <h2>Dress Code</h2>
-      <p>Se sugiere un look semi-formal en tonos pasteles, florales o blanco.</p>
-    </div>
-  </div>
-  
-  <!-- Modal TIPS -->
-  <div id="modalTips" class="modal">
-    <div class="modal-contenido">
-        <button class="cerrar-modal" onclick="cerrarModal('modalTips')">×</button>
-      <div class="icono-formulario">
-        <img src="imagenes/icono-tips.jpg" alt="Icono tips">
-      </div>
-      <h2>Tips y Notas</h2>
-      <p>No olvides traer buena onda, confirmar asistencia a tiempo y leer bien la dirección 🎉</p>
-    </div>
-  </div>
-  
 
 
 
 
 
 
-        <!-- Mapa del evento 
+    <!-- Mapa del evento 
         <section id="ubicacion" class="seccion">
             <h2>¿Dónde es?</h2>
             <p>Salón de fiestas “Estilo Marsala”</p>
@@ -218,7 +242,7 @@
 
 
 
-        <!-- Sugerencias musicales 
+    <!-- Sugerencias musicales 
         <section id="canciones" class="seccion">
             <h2>¿Qué canciones no pueden faltar?</h2>
             <form id="form-cancion">
@@ -227,18 +251,18 @@
             </form>
         </section>-->
 
-        <!-- Pie de página -->
-        <!-- Pie de página -->
-        <footer class="footer-invitacion">
-            <div class="footer-texto">
-              <p>Con cariño, <strong>Tu nombre 💖</strong></p>
-              <small>
-                &copy; 2025 - Invitación diseñada por 
-                <a href="https://www.instagram.com/rodrigo_brun?igsh=MTBxM3I1enU0Ym01dg==" target="_blank" class="footer-link">@Rodrigo Brun</a>
-              </small>
-            </div>
-          </footer>
-          
+    <!-- Pie de página -->
+    <footer class="footer-invitacion">
+        <div class="footer-texto">
+            <p>Con cariño, <strong>Tu nombre 💖</strong></p>
+            <small>
+                &copy; 2025 - Invitación diseñada por
+                <a href="https://www.instagram.com/rodrigo_brun?igsh=MTBxM3I1enU0Ym01dg==" target="_blank"
+                    class="footer-link">@Rodrigo Brun</a>
+            </small>
+        </div>
+    </footer>
+
 
 
 

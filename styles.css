@@ -144,7 +144,7 @@ body {
   }
   
   .contador-circular div {
-    background-color: rgba(255,255,255,0.15);
+    background: transparent !important;  /* Elimina fondo */
     color: white;
     font-weight: bold;
     padding: 10px 18px;
@@ -467,7 +467,25 @@ body {
   
 
 
-
+  @keyframes bailar {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-5px) rotate(-5deg);
+    }
+    50% {
+      transform: translateY(5px) rotate(5deg);
+    }
+    75% {
+      transform: translateY(-3px) rotate(-3deg);
+    }
+  }
+  
+  .icono-tarjeta {
+    animation: bailar 2s infinite ease-in-out;
+  }
+  
 
 
   /* -------------------------------

@@ -148,24 +148,17 @@ function irASeccion(id) {
 
 
 function abrirModal(id) {
-  document.getElementById(id).style.display = 'flex';
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.style.display = 'flex';
+  }
   document.querySelectorAll('section, header, footer').forEach(e => e.style.display = 'none');
 }
-
-function cerrarModal(id) {
-  document.getElementById(id).style.display = 'none';
-  document.querySelectorAll('section, header, footer').forEach(e => e.style.display = '');
-}
-
 
 function cerrarModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
     modal.style.display = 'none';
   }
-
-  // Si ocultás secciones cuando abrís el modal, las volvés a mostrar
-  document.querySelectorAll("section, header, footer").forEach(sec => {
-    sec.style.display = "";
-  });
+  document.querySelectorAll('section, header, footer').forEach(e => e.style.display = '');
 }

@@ -205,10 +205,11 @@ h1{
   .icono-celebracion {
     width: 222px;
     margin-bottom: 10px !important; /* antes 30px */
+    margin-top: -100px;
   }
 
   .info-celebracion .bloque-info:first-of-type {
-    margin-top: -10px; /* acercamos más al ícono */
+    margin-top: -100px; /* acercamos más al ícono */
   }
   
   .bloque-info {
@@ -219,14 +220,14 @@ h1{
   .bloque-info h3 {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
-    color: #4d2c2c;
+    color: rgba(255, 249, 240, 0.8);
     margin-bottom: 0px;
     text-shadow: #1d1f2b;
   }
   
   .bloque-info p {
     font-size: 20px;
-    color: #801336;
+    color: rgba(255, 249, 240, 0.6);
     font-weight: bold;
     text-shadow: #4d0b20;
   }
@@ -423,16 +424,23 @@ h1{
      🔻 FOOTER
   ---------------------------------*/
   .footer-invitacion {
-    background-color: #4d2c2c;
-    color: #fffaf4;
+    background-color: rgba(255, 249, 240, 0.4); /* crema + transparencia */
+    backdrop-filter: blur(6px); /* efecto difuminado detrás */
+    color: #4d2c2c;
     padding: 40px 20px;
     margin-top: 80px;
     font-size: 15px;
     text-align: center;
-    border-top: 4px solid #801336;
+    border-top: 4px solid rgba(255, 249, 240, 0.4);
     position: relative;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-  }
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0; /* sin bordes redondeados para que se fusione con el borde inferior */
+    margin-top: -60px;
+}
+
+  
   
   .footer-invitacion p {
     font-family: 'Playfair Display', serif;
